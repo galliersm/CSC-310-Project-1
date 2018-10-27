@@ -4,13 +4,13 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
-\usepackage{listings}
+\usepackage{hyperref}
 \usepackage[usenames, dvipsnames]{color}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage[T1]{fontenc}
 
-\author{Michael Galliers}
+\author{Michael Galliers \\ github \href{https://github.com/galliersm/CSC-310-Project-1}{https://github.com/galliersm/CSC-310-Project-1}}
 \title{CSC 310 Project 1}
 \date{October 26, 2018}
 \begin{document}
@@ -35,18 +35,17 @@ queues and stacks.
 \end{figure}
 
 \paragraph{}
-The Radix Sort algorithm is a counting based sorting algorithm. (Include
-something about positive integers) The algorithm works by sorting positive
-integers one digit at a time, starting from the least significant digit and
-moving on to the most significant digit. It does this by extracting the current
-digit being sorted by from each number and then placing the number in one of
-ten queues (indexed from 0 to 9) based on the value of that digit. After this
-is complete, the numbers in each queue (processed from queue 0 to queue 9) are
-sorted in the same way based on the next more significant digit. This process
-continues until the digit being processed exceeds the number(s) with the most
-digits. At this time, the queue of index 0 will have all the numbers sorted in
-non-decreasing order, such that the least number will be the first to be
-dequeued.
+The Radix Sort algorithm is a counting based sorting algorithm. The algorithm
+works by sorting positive integers one digit at a time, starting from the least
+significant digit and moving on to the most significant digit. It does this by
+extracting the current digit being sorted by from each number and then placing
+the number in one of ten queues (indexed from 0 to 9) based on the value of
+that digit. After this is complete, the numbers in each queue (processed from
+queue 0 to queue 9) are sorted in the same way based on the next more
+significant digit. This process continues until the digit being processed
+exceeds the number(s) with the most digits. At this time, the queue of index 0
+will have all the numbers sorted in non-decreasing order, such that the least
+number will be the first to be dequeued.
 
 \paragraph{}
 The algorithm uses a modified queue ADT with an increased default capacity and
@@ -112,7 +111,7 @@ calculation. It takes a postfix expression as input. It then iterates through
 each character of the expression. If it encounters a space, it is ignored. If
 it finds a digit, it is type-casted to int datatype and pushed to the stack.
 If an operator is encountered, the last two numbers are popped off the stack in
-the order number1, number2 (due to design of stack) and saved to variables.
+the order number2, number1 (due to design of stack) and saved to variables.
 Then, using the aforementioned operator dictionary, the method for the operator
 found is obtained and used to evaluate the numbers. Then, the result is pushed
 back on the stack. After all the characters have been processed, the remaining
@@ -130,8 +129,12 @@ or quit.
 
 \section{Conclusion}
 In conclusion, this project encouraged the students to apply concepts learned
-in class to real life programming problems. I personally learned a lot from
-writing these programs and am looking forward to our next project.
+in class to real life programming problems. Throughout computer science
+training in college, it is important to remember that knowledge of concept is
+only important if you know how to apply them. Otherwise, it is just head
+knowledge. I learned a lot about how to apply the concepts we learned in class
+in this assignment and am looking forward to the next programming project we
+have.
 
 
 \end{document}
